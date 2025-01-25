@@ -1,0 +1,14 @@
+// LOCALHOST 
+
+### 
+GET http://localhost:8080/contacts
+### 
+GET http://localhost:8080/contacts/678b0fd8d0fbbdf510520fe8
+
+
+// PRODUCTION
+
+### 
+GET https://cse341-personal-assignment02.onrender.com/contacts
+### 
+GET https://cse341-personal-assignment02.onrender.com/contacts/678b0fd8d0fbbdf510520fe8
