@@ -8,9 +8,12 @@ const getContacts = async (req, res) => {
 };
 
 const getContactById = async (req, res) => {
-  const userID = new ObjectId(req.params.id);
+  const userId = new ObjectId(req.params.id);
   const db = await connectToDatabase(process.env.DB_NAME);
-  const contact = await db.collection("contacts").findOne({ _id: userID });
+  const contact = await db.collection("contacts").findOne({
+    _id: userId,
+  });
   res.json(contact);
 };
+
 module.exports = { getContacts, getContactById };
