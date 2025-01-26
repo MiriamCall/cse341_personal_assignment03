@@ -91,7 +91,7 @@ const deleteContact = async (req, res) => {
     const db = await connectToDatabase(process.env.DB_NAME);
     const response = await db.collection("contacts").deleteOne({ _id: userId });
     if (response.deletedCount > 0) {
-      res.status(204).send({ message: "Contact deleted successfully." });
+      res.status(200).send({ message: "Contact deleted successfully." });
     } else {
       res
         .status(500)
